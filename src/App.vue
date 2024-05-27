@@ -24,6 +24,6 @@ export default {
 }
 </script>
 
-<style src="../global.css">
-  
+<style lang="css">
+  @import url(./components/style/global.css);
 </style>

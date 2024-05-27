@@ -1,5 +1,9 @@
 <template>
-    <h1>Lux Cars</h1>
+    <section class="home" id="home">
+        <div class="home-text">
+            
+        </div>
+    </section>
 </template>
 
 <script>
@@ -14,4 +18,9 @@
 </script>
 
 <style>
+
+section{
+    padding: 4rem 0 2rem;
+}
+
 </style>
