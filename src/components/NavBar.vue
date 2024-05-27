@@ -34,6 +34,8 @@ export default {
 
 <style>
 
+@import url(../assets/style/global.css);
+
     .nav-container{
         max-width: 1068px;
         margin-left: auto;
