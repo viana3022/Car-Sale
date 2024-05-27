@@ -109,6 +109,7 @@ export default {
     #search-icon{
         font-size: 24px;
         cursor: pointer;
+        color: var(--bg-color);
     }
 
     .search-box{
