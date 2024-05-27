@@ -1,6 +1,8 @@
 <template>
-  <PaginaInicial/>
-  <NavBar/>
+  <div>
+    <PaginaInicial/>
+    <NavBar/>
+  </div>
 </template>
 
 <script>

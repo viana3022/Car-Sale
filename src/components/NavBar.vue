@@ -33,7 +33,8 @@ export default {
 </script>
 
 <style>
-    .container{
+
+    .nav-container{
         max-width: 1068px;
         margin-left: auto;
         margin-right: auto;
@@ -48,11 +49,34 @@ export default {
         z-index: 100;
     }
 
-    .nav{
+    .navbar{
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 20px 35px;
+    }
+
+    #menu-icon{
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text-color);
+        display: none;
+    }
+
+    .logo{
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-color);
+    }
+
+    .logo span{
+        color: var(--main-color);
+    }
+
+    .navbar{
+        display: flex;
+        column-gap: 2rem;
+
     }
 
 
