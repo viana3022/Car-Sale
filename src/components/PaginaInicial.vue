@@ -74,21 +74,123 @@
             <a href="#" class="btn">Saiba Mais</a>
         </div>
     </section>
+    <!-- Parts Section -->
+    <section class="parts" id="parts">
+        <div class="heading">
+            <span>Peças Disponíveis</span>
+            <h2>Seu Carro sempre bem cuidado</h2>
+            <p>Componentes 100% originais comprados direto de seus respectivos fabricantes</p>
+        </div>
+        <!-- Parts Container -->
+        <div class="parts-container container">
+            <!-- Box 1 -->
+            <div class="box">
+                <img src="../assets/img/partt1.jpg" alt="">
+                <h3>Kit Turbo Porshe 911</h3>
+                <span>R$12.000</span>
+                <i class='bx bxs-star'>(7 Reviews)</i>
+                <a href="#" class="btn">Compre Já</a>
+                <a href="#" class="details">Veja os detalhes</a>
+            </div>
+            <!-- Box 2 -->
+            <div class="box">
+                <img src="../assets/img/partt2.webp" alt="">
+                <h3>Kit Supercharged Híbrido</h3>
+                <span>R$19.000</span>
+                <i class='bx bxs-star'>(4 Reviews)</i>
+                <a href="#" class="btn">Compre Já</a>
+                <a href="#" class="details">Veja os detalhes</a>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <img src="../assets/img/partt3.webp" alt="">
+                <h3>Pneu 20" Michelin Pilot Sport Cup</h3>
+                <span>R$16.000</span>
+                <i class='bx bxs-star'>(16 Reviews)</i>
+                <a href="#" class="btn">Compre Já</a>
+                <a href="#" class="details">Veja os detalhes</a>
+            </div>
+            <!-- Box 4 -->
+            <div class="box">
+                <img src="../assets/img/part4.png" alt="">
+                <h3>Filtro de Ar Motec</h3>
+                <span>R$190.00</span>
+                <i class='bx bxs-star'>(27 Reviews)</i>
+                <a href="#" class="btn">Compre Já</a>
+                <a href="#" class="details">Veja os detalhes</a>
+            </div>
+            <!-- Box 5 -->
+            <div class="box">
+                <img src="../assets/img/part6.png" alt="">
+                <h3>Jogo 4 rodas OZ 20"</h3>
+                <span>R$7.989</span>
+                <i class='bx bxs-star'>(12 Reviews)</i>
+                <a href="#" class="btn">Compre Já</a>
+                <a href="#" class="details">Veja os detalhes</a>
+            </div>
+            <!-- Box 6 -->
+            <div class="box">
+                <img src="../assets/img/partt4.webp" alt="">
+                <h3>Kit Suspensão a Ar Castor</h3>
+                <span>R$9.000</span>
+                <i class='bx bxs-star'>(8 Reviews)</i>
+                <a href="#" class="btn">Compre Já</a>
+                <a href="#" class="details">Veja os detalhes</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">Lux<span>Cars</span></a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Page</h3>
+                <a href="#">Home</a>
+                <a href="#">Carros</a>
+                <a href="#">Peças</a>
+                <a href="#">Sobre</a>
+            </div>
+            <div class="footer-box">
+                <h3>Legal</h3>
+                <a href="#">Privacidade</a>
+                <a href="#">Política de Devolução</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contato</h3>
+                <p>Brasil</p>
+                <p>USA</p>
+                <p>Dubai</p>
+            </div>
+        </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Lux Cars Todos os Direitos Reservados.</p>
+    </div>
 
 </template>
 
 <script>
-    export default {
-        name: 'PaginaInicial',
-        data(){
-            return{
-                
-            }
-        }
+export default {
+    name: 'PaginaInicial',
+    data() {
+        return {}
     }
+}
 </script>
 
+
 <style>
+
 section {
     padding: 4rem 0 2rem;
 }
@@ -225,6 +327,128 @@ section {
     margin: 0.5rem 0 1.4rem;
 }
 
+/* Parts Section */
+
+.parts-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.parts-container .box {
+    flex: 1 1 17rem;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #f6f6f6;
+    border-radius: 0.5rem;
+}
+
+.parts-container .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+
+.parts-container .box h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.parts-container .box span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.parts-container .box .bx{
+    color: var(--primary-color);
+    margin: 1.2rem 0;
+}
+
+.parts-container .box .btn {
+    max-width: 140px;
+}
+
+.parts-container .box .details{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.parts-container .box .details:hover{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Footer */
+
+.footer{
+    background: var(--text-color);
+    color: #f6f6f6;
+    border-top: 2px solid var(--primary-color);
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container .logo{
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.footer-container .footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+}
+
+.social a{
+    font-size: 24px;
+    color: var(--bg-color);
+    margin-right: 1rem;
+}
+
+.social a:hover {
+    color: var(--primary-color);
+}
+
+.footer-box h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a{
+    color: #818181;
+    margin-bottom: 10px;
+}
+
+.footer-box a:hover{
+    color: var(--primary-color);
+}
+
+/* copyright */
+
+.copyright{
+    padding: 20px;
+    text-align: center;
+    color: var(--bg-color);
+    background: var(--text-color);
+}
 
 </style>
 

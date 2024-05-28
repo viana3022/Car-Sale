@@ -36,12 +36,18 @@ export default {
             let search = document.querySelectorAll('.search-box')[0];
 
             document.querySelector('#search-icon').onclick = () => {
-            search.classList.toggle('active');
+                search.classList.toggle('active');
             };
         });
+
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('shadow', window.scrollY > 0);
+        });
+    }
 }
 
-}
 </script>
 
 <style>
@@ -61,6 +67,16 @@ export default {
         top: 0;
         left: 0;
         z-index: 100;
+    }
+
+    header.shadow{
+        background: var(--bg-color);
+        box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
+        transition: 0.5s ease;
+    }
+
+    header.shadow #search-icon{
+        color: var(--text-color);
     }
 
     .nav {
