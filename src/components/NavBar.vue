@@ -32,19 +32,28 @@ export default {
     };
     },
     mounted() {
-        this.$nextTick(() => {
             let search = document.querySelectorAll('.search-box')[0];
-
             document.querySelector('#search-icon').onclick = () => {
                 search.classList.toggle('active');
+                menu.classList.remove('active');
             };
-        });
 
         let header = document.querySelector('header');
-
         window.addEventListener('scroll', () => {
             header.classList.toggle('shadow', window.scrollY > 0);
         });
+
+        let menu = document.querySelector('.navbar');
+        document.querySelector('#menu-icon').onclick = () => {
+                menu.classList.toggle('active');
+                search.classList.remove('active');
+            };
+
+            // Hide Menu and Search Box On Scroll
+            window.onscroll = () => {
+                menu.classList.remove('active');
+                search.classList.remove('active');
+            }
     }
 }
 
