@@ -32,16 +32,31 @@ export default {
     };
     },
     mounted() {
-        this.$nextTick(() => {
             let search = document.querySelectorAll('.search-box')[0];
-
             document.querySelector('#search-icon').onclick = () => {
-            search.classList.toggle('active');
+                search.classList.toggle('active');
+                menu.classList.remove('active');
             };
+
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('shadow', window.scrollY > 0);
         });
+
+        let menu = document.querySelector('.navbar');
+        document.querySelector('#menu-icon').onclick = () => {
+                menu.classList.toggle('active');
+                search.classList.remove('active');
+            };
+
+            // Hide Menu and Search Box On Scroll
+            window.onscroll = () => {
+                menu.classList.remove('active');
+                search.classList.remove('active');
+            }
+    }
 }
 
-}
 </script>
 
 <style>
@@ -63,6 +78,16 @@ export default {
         z-index: 100;
     }
 
+    header.shadow{
+        background: var(--bg-color);
+        box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
+        transition: 0.5s ease;
+    }
+
+    header.shadow #search-icon{
+        color: var(--text-color);
+    }
+
     .nav {
         display: flex;
         align-items: center;
@@ -78,7 +103,7 @@ export default {
     }
 
     .logo {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         color: var(--text-color);
 
@@ -109,6 +134,7 @@ export default {
     #search-icon{
         font-size: 24px;
         cursor: pointer;
+        color: var(--bg-color);
     }
 
     .search-box{
