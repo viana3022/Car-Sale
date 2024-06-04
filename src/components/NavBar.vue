@@ -61,7 +61,7 @@ export default {
 
 <style>
 
-@import url(../components/style/global.css);
+@import url(../global.css);
 
     .container {
         max-width: 1068px;
