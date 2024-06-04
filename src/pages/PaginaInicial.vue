@@ -4,7 +4,7 @@
             <h1>O sonho do seu novo <br><span>Carro</span> está a um click</h1>
             <p>Confira agora nosso estoque de veículos premium <br> diversas marcas e valores e garanta já o seu!</p>
             <!--Home Button-->
-            <a href="#" class="btn">Confira Agora</a>
+            <router-link to="/car-section" class="btn">Confira Agora</router-link>
         </div>
     </section>
     <section class="cars" id="cars">
@@ -182,14 +182,11 @@
 <script>
 export default {
     name: 'PaginaInicial',
-    data() {
-        return {}
     }
-}
 </script>
 
 
-<style>
+<style scoped>
 
 section {
     padding: 4rem 0 2rem;
